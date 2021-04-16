@@ -1,20 +1,22 @@
 # NLU First Assignment
 
-Student's info:
+Student:
 - **Name:** Giovanni
 - **Surname:** Lorenzini
 - **Student number:** 223715
 
 ## Requirements
 
-### Install spacy with conda
+To run this project is necessary to have `Python` and `SpaCy`. To install `SpaCy` follow the instructions either for `pip` or `conda`.
+
+### Install `SpaCy` with `conda`
 
 ```shell
 $ conda install -c conda-forge spacy
 $ python -m spacy download en_core_web_sm
 ```
 
-### Install spacy with pip
+### Install `SpaCy` with `pip`
 
 ```shell
 $ pip install -U pip setuptools wheel
@@ -53,7 +55,7 @@ For example:
 ('with', [a, telescope])
 ```
 
-For each token in a `Doc` the code extract a subtree and add each subtree element apart from the token itself to a list. The list is then added to a touple composed of `(token, list)` that in the end are append to the returned list.
+For each token in a `Doc` the code extract a subtree and add each subtree element except from the token itself to a list. The list is then added to a touple composed of `(token, list)` that in the end are append to the returned list.
 
 ### 3. Check if a given list of tokens (segment of a sentence) forms a subtree
 
@@ -86,6 +88,8 @@ For example:
 ```python
 {'nsubj': ['I'], 'dobj': ['the man'], 'iobj': []}
 ```
+
+To obtain the three types of span, the code cycle over all the tokens and check if `token.dep_` is of the type that we want. If it's true then the subtree of that token will be append to the right list.
 
 ## Test
 
