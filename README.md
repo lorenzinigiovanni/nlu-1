@@ -52,7 +52,7 @@ Each subtree is structured as follow:
 where the list of subtree words are ordered w.r.t. sentence order.
 For example:
 ```python
-('with', [a, telescope])
+('with', ['a', 'telescope'])
 ```
 
 For each token in a `Doc` the code extract a subtree and add each subtree element except from the token itself to a list. The list is then added to a touple composed of `(token, list)` that in the end are append to the returned list.
@@ -142,12 +142,12 @@ Question 1:
 
 Question 2:
 ('I', [])
-('saw', [I, the, man, with, a, telescope, .])
+('saw', ['I', 'the', 'man', 'with', 'a', 'telescope', '.'])
 ('the', [])
-('man', [the])
-('with', [a, telescope])
+('man', ['the'])
+('with', ['a', 'telescope'])
 ('a', [])
-('telescope', [a])
+('telescope', ['a'])
 ('.', [])
 
 Question 3:

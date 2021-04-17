@@ -28,7 +28,7 @@ def getSubtrees(sentence):
         list2 = []
         for descendant in token.subtree:
             if(descendant != token):
-                list2.append(descendant)
+                list2.append(descendant.text)
         list1.append((token.text, list2))
 
     return list1
